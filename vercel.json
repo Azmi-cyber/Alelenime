@@ -1,10 +1,4 @@
 {
-  "functions": {
-    "api/scrape.js": {
-      "runtime": "nodejs18.x",
-      "maxDuration": 30
-    }
-  },
   "builds": [
     {
       "src": "api/scrape.js",
