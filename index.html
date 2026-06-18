@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alelen!me — Streaming Anime & Donghua</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">🎬 Alelen<span>!</span><span class="me">me</span></div>
+      <nav>
+        <a href="#" onclick="loadAll()" class="active" id="navHome">Beranda</a>
+        <a href="#" onclick="loadAnime()" id="navAnime">🇯🇵 Anime</a>
+        <a href="#" onclick="loadDonghua()" id="navDonghua">🐉 Donghua</a>
+      </nav>
+      <div class="search">
+        <input type="text" id="searchInput" placeholder="Cari anime/donghua..." onkeyup="searchAnime(event)">
+        <button onclick="searchAnime()">🔍</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section id="hero">
+        <h1>🎥 <span>Alelen</span><span class="exclaim">!</span><span>me</span></h1>
+        <p>Streaming Anime (NontonAnimeID) & Donghua (Anichin) — Subtitle Indonesia</p>
+        <div class="badges">
+          <span>🇯🇵 Anime</span>
+          <span>🐉 Donghua</span>
+          <span>📥 Download</span>
+          <span>🔄 Real-time</span>
+          <span>⚡ Alelen!me</span>
+        </div>
+      </section>
+
+      <div class="controls">
+        <div class="filter-buttons">
+          <button onclick="loadAll()" class="active" id="btnAll">📋 Semua</button>
+          <button onclick="loadAnime()" id="btnAnime">🇯🇵 Anime</button>
+          <button onclick="loadDonghua()" id="btnDonghua">🐉 Donghua</button>
+        </div>
+        <div class="source-info" id="sourceInfo">Menampilkan semua sumber</div>
+      </div>
+
+      <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Memuat data dari The Sunken Circuit...</p>
+      </div>
+
+      <div id="content" class="grid"></div>
+    </div>
+  </main>
+
+  <!-- Modal Detail -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>🎬 <strong>Alelen!me</strong> — Dibangun dari patahan sistem di The Sunken Circuit.</p>
+      <p style="margin-top:5px;font-size:11px;color:#444;">⚠️ Rate limit: 30 request/menit | Cache 5 menit</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
